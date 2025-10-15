@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navLinks = ["Home", "About", "Services", "Projects", "Contact"];
 
@@ -40,7 +41,7 @@ const Navbar = () => {
             isScrolled ? "text-gray-900" : "text-white"
           }`}
         >
-          Tawar construction company
+          Tanwar Construction
         </Link>
 
         {/* Desktop Links */}
@@ -58,12 +59,14 @@ const Navbar = () => {
             </li>
           ))}
 
+          {/* Book Appointment Button */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => navigate("/contact")}
             className="ml-4 bg-yellow-400 text-gray-900 font-semibold px-5 py-2 rounded-xl shadow hover:bg-yellow-500 transition-colors"
           >
-            Book appointment
+            Book Appointment
           </motion.button>
         </ul>
 
@@ -117,6 +120,10 @@ const Navbar = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              navigate("/contact");
+              setMenuOpen(false);
+            }}
             className="bg-yellow-400 text-gray-900 font-semibold px-6 py-2 rounded-full shadow hover:bg-yellow-500 transition-colors"
           >
             Get Quote

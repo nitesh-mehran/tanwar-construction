@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto grid gap-10 md:grid-cols-4">
         {/* Logo / Company Name */}
         <div className="flex flex-col space-y-4">
-          <h1 className="text-2xl font-bold text-[#facc15]">Tawar Construction Company</h1>
+          <h1 className="text-2xl font-bold text-[#facc15]">Tanwar Construction</h1>
           <p className="text-gray-400 text-sm">
             Building dreams with precision and excellence.
           </p>
@@ -17,11 +18,46 @@ const Footer = () => {
         <div>
           <h3 className="text-[#facc15] font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            <li className="hover:text-[#facc15] transition-colors cursor-pointer">Home</li>
-            <li className="hover:text-[#facc15] transition-colors cursor-pointer">About</li>
-            <li className="hover:text-[#facc15] transition-colors cursor-pointer">Services</li>
-            <li className="hover:text-[#facc15] transition-colors cursor-pointer">Projects</li>
-            <li className="hover:text-[#facc15] transition-colors cursor-pointer">Contact</li>
+            <li>
+              <Link
+                to="/"
+                className="block w-full hover:text-[#facc15] transition-colors"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                className="block w-full hover:text-[#facc15] transition-colors"
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/services"
+                className="block w-full hover:text-[#facc15] transition-colors"
+              >
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/projects"
+                className="block w-full hover:text-[#facc15] transition-colors"
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="block w-full hover:text-[#facc15] transition-colors"
+              >
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -29,10 +65,38 @@ const Footer = () => {
         <div>
           <h3 className="text-[#facc15] font-semibold mb-4">Services</h3>
           <ul className="space-y-2">
-            <li className="hover:text-[#facc15] transition-colors cursor-pointer">Residential</li>
-            <li className="hover:text-[#facc15] transition-colors cursor-pointer">Commercial</li>
-            <li className="hover:text-[#facc15] transition-colors cursor-pointer">Infrastructure</li>
-            <li className="hover:text-[#facc15] transition-colors cursor-pointer">Design</li>
+            <li>
+              <Link
+                to="/services#residential"
+                className="block w-full hover:text-[#facc15] transition-colors"
+              >
+                Residential
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/services#commercial"
+                className="block w-full hover:text-[#facc15] transition-colors"
+              >
+                Commercial
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/services#infrastructure"
+                className="block w-full hover:text-[#facc15] transition-colors"
+              >
+                Infrastructure
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/services#design"
+                className="block w-full hover:text-[#facc15] transition-colors"
+              >
+                Design
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -41,7 +105,7 @@ const Footer = () => {
           <h3 className="text-[#facc15] font-semibold mb-4">Contact</h3>
           <ul className="space-y-2 text-gray-400 text-sm">
             <li>123 Main Street, Jaipur, India</li>
-            <li>Email: info@tawarconstruction.com</li>
+            <li>Email: info@tanwarconstruction.com</li>
             <li>Phone: +91 81049 42875</li>
           </ul>
         </div>
@@ -49,7 +113,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="mt-10 text-center text-gray-500 text-sm">
-        © 2025 Tawar Construction. All Rights Reserved.
+        © 2025 Tanwar Construction. All Rights Reserved.
       </div>
 
       {/* Floating Right Side Icons */}
