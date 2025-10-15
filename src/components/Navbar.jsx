@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   const navLinks = ["Home", "About", "Services", "Projects", "Contact"];
 
@@ -16,6 +17,11 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location]);
 
   return (
     <motion.nav
@@ -42,7 +48,7 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <li key={link}>
               <Link
-                to={`/${link.toLowerCase()}`}
+                to={link === "Home" ? "/" : `/${link.toLowerCase()}`}
                 className={`text-sm font-medium transition-colors duration-300 hover:text-yellow-400 ${
                   isScrolled ? "text-gray-900" : "text-white"
                 }`}
@@ -98,7 +104,7 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <li key={link}>
               <Link
-                to={`/${link.toLowerCase()}`}
+                to={link === "Home" ? "/" : `/${link.toLowerCase()}`}
                 onClick={() => setMenuOpen(false)}
                 className={`text-lg font-medium transition-colors hover:text-yellow-500 ${
                   isScrolled ? "text-gray-900" : "text-white"
