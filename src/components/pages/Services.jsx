@@ -57,27 +57,26 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white text-gray-800">
+    <div className="bg-gradient-to-b from-[#e6f2ff] to-white text-gray-800">
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] flex items-center justify-center text-center bg-gradient-to-b from-blue-900 via-blue-700 to-blue-200 overflow-hidden">
+      <section className="relative w-full h-[60vh] flex items-center justify-center text-center bg-gradient-to-b from-[#b3d9ff] via-[#cce6ff] to-[#e6f2ff] overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="relative z-10 px-6"
         >
-          <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight drop-shadow-lg">
+          <h1 className="text-4xl sm:text-6xl font-extrabold text-blue-900 tracking-tight drop-shadow-md">
             Our Services
           </h1>
-          <p className="mt-3 text-lg sm:text-xl text-blue-100 font-medium max-w-2xl mx-auto">
-  Tanwar Construction — crafting excellence in every project.
-</p>
-
+          <p className="mt-3 text-lg sm:text-xl text-blue-800 font-medium max-w-2xl mx-auto">
+            Tanwar Construction — crafting excellence in every project.
+          </p>
         </motion.div>
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent rounded-t-[40%]"></div>
       </section>
 
-      {/* Main Services Section */}
+      {/* Services Grid */}
       <section className="py-20 px-6 sm:px-12 lg:px-24 max-w-screen-xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -85,10 +84,10 @@ const Services = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">
             Building Beyond Expectations
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-700 max-w-2xl mx-auto">
             Our diverse range of construction services ensures excellence across
             residential, commercial, and industrial projects — powered by
             advanced technology and expert engineering.
@@ -102,14 +101,14 @@ const Services = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white p-8 rounded-2xl shadow-md hover:shadow-blue-300/40 transition-transform duration-300 hover:-translate-y-2 border-t-4 border-blue-700"
+              className="bg-white p-8 rounded-2xl shadow-md hover:shadow-blue-200/70 transition-transform duration-300 hover:-translate-y-2 border-t-4 border-blue-600"
             >
               <div className="flex flex-col items-center text-center">
                 {service.icon}
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                <h3 className="text-xl font-semibold text-blue-900 mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-700 text-sm leading-relaxed">
                   {service.desc}
                 </p>
               </div>
@@ -119,7 +118,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-900 py-14 text-center text-white">
+      <section className="bg-gradient-to-r from-blue-700 to-blue-900 py-14 text-center text-white">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -133,9 +132,9 @@ const Services = () => {
             delivery, and architectural excellence.
           </p>
           <Link to="/contact">
-          <button className="bg-white text-blue-900 font-semibold px-8 py-3 rounded-full shadow-md hover:bg-blue-50 transition">
-            Get in Touch
-          </button>
+            <button className="bg-white text-blue-900 font-semibold px-8 py-3 rounded-full shadow-md hover:bg-blue-50 transition">
+              Get in Touch
+            </button>
           </Link>
         </motion.div>
       </section>

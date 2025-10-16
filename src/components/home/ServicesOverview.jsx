@@ -5,22 +5,22 @@ import { FaBuilding, FaDraftingCompass, FaTools, FaCity } from "react-icons/fa";
 const services = [
   {
     title: "Residential Construction",
-    icon: <FaBuilding className="text-yellow-600 text-4xl mb-4" />,
+    icon: <FaBuilding className="text-blue-600 text-4xl mb-4" />,
     desc: "From modern villas to elegant apartments, we design and build homes that define comfort and style.",
   },
   {
     title: "Commercial Projects",
-    icon: <FaCity className="text-yellow-600 text-4xl mb-4" />,
+    icon: <FaCity className="text-blue-600 text-4xl mb-4" />,
     desc: "Delivering premium commercial spaces with smart architecture and sustainable design.",
   },
   {
     title: "Architecture & Design",
-    icon: <FaDraftingCompass className="text-yellow-600 text-4xl mb-4" />,
+    icon: <FaDraftingCompass className="text-blue-600 text-4xl mb-4" />,
     desc: "Creative architectural solutions that blend innovation with functionality.",
   },
   {
     title: "Renovation & Remodeling",
-    icon: <FaTools className="text-yellow-600 text-4xl mb-4" />,
+    icon: <FaTools className="text-blue-600 text-4xl mb-4" />,
     desc: "Transforming old spaces into fresh modern environments with superior craftsmanship.",
   },
 ];

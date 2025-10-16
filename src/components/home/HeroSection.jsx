@@ -28,7 +28,7 @@ const HeroSection = () => {
       >
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-white drop-shadow-md">
           Building the Future with{" "}
-          <span className="text-yellow-400">Strength</span> & Precision
+          Strength & Precision
         </h1>
 
         <p className="text-gray-200 text-lg sm:text-xl mb-8 drop-shadow-sm max-w-3xl">
@@ -37,12 +37,13 @@ const HeroSection = () => {
         </p>
 
         <motion.a
-          whileHover={{ scale: 1.05 }}
-          href="#contact"
-          className="bg-yellow-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-600 transition"
-        >
-          Get a Free Quote
-        </motion.a>
+  whileHover={{ scale: 1.05 }}
+  href="#contact"
+  className="bg-blue-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300"
+>
+  Get a Free Quote
+</motion.a>
+
       </motion.div>
     </section>
   );

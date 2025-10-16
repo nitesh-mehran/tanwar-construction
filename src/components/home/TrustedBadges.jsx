@@ -19,7 +19,7 @@ const TrustedBadges = () => {
             whileHover={{ scale: 1.05 }}
             className="bg-white p-6 rounded-2xl shadow-md border border-gray-200 hover:border-blue-400 transition"
           >
-            <div className="text-yellow-600 text-4xl mb-2 flex justify-center">
+            <div className="text-blue-600 text-4xl mb-2 flex justify-center">
               {badge.icon}
             </div>
             <h3 className="text-2xl font-bold text-gray-700">{badge.title}</h3>

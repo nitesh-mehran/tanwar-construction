@@ -4,32 +4,32 @@ import { FaHardHat, FaTools, FaClock, FaStar, FaShieldAlt, FaHandsHelping } from
 
 const reasons = [
   {
-    icon: <FaHardHat size={40} className="text-yellow-600" />,
+    icon: <FaHardHat size={40} className="text-blue-600" />,
     title: "Expert Team",
     description: "Skilled professionals ensuring top-quality construction from start to finish.",
   },
   {
-    icon: <FaTools size={40} className="text-yellow-600" />,
+    icon: <FaTools size={40} className="text-blue-600" />,
     title: "Premium Materials",
     description: "We use only the highest quality materials for lasting durability.",
   },
   {
-    icon: <FaClock size={40} className="text-yellow-600" />,
+    icon: <FaClock size={40} className="text-blue-600" />,
     title: "On-Time Delivery",
     description: "Projects completed on schedule without compromising quality.",
   },
   {
-    icon: <FaStar size={40} className="text-yellow-600" />,
+    icon: <FaStar size={40} className="text-blue-600" />,
     title: "Innovation & Design",
     description: "Modern designs and innovative solutions for every project.",
   },
   {
-    icon: <FaShieldAlt size={40} className="text-yellow-600" />,
+    icon: <FaShieldAlt size={40} className="text-blue-600" />,
     title: "Safety First",
     description: "Strict safety standards to ensure secure and compliant construction.",
   },
   {
-    icon: <FaHandsHelping size={40} className="text-yellow-600" />,
+    icon: <FaHandsHelping size={40} className="text-blue-600" />,
     title: "Reliable Support",
     description: "Continuous support and transparent communication throughout.",
   },

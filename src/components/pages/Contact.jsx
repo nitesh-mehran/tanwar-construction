@@ -4,60 +4,61 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white text-gray-800">
+    <div className="bg-gradient-to-b from-[#e6f2ff] to-white text-gray-800">
 
       {/* Hero Section */}
-      <section className="relative w-full h-[50vh] flex items-center justify-center text-center bg-gradient-to-b from-blue-900 via-blue-700 to-blue-200 overflow-hidden">
+      <section className="relative w-full h-[60vh] flex items-center justify-center text-center bg-gradient-to-b from-[#b3d9ff] via-[#cce6ff] to-[#e6f2ff] overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="relative z-10 px-6"
         >
-          <h1 className="text-4xl sm:text-6xl font-extrabold text-white drop-shadow-lg">
+          <h1 className="text-4xl sm:text-6xl font-extrabold text-blue-900 tracking-tight drop-shadow-md">
             Get in Touch
           </h1>
-          <p className="mt-3 text-lg sm:text-xl text-blue-100 font-medium max-w-2xl mx-auto">
-            Contact Tanwar Construction for your next project, consultation, or query.
+          <p className="mt-3 text-lg sm:text-xl text-blue-800 font-medium max-w-2xl mx-auto">
+            Get in touch with us for any project inquiries or collaborations —
+            we’re here to bring your vision to life.
           </p>
         </motion.div>
+
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent rounded-t-[40%]"></div>
       </section>
 
       {/* Contact Info Cards */}
       <section className="py-16 px-6 sm:px-12 lg:px-24 max-w-screen-xl mx-auto grid md:grid-cols-3 gap-8">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-blue-300/40 transition"
-        >
-          <FaMapMarkerAlt className="text-blue-700 text-3xl mb-4" />
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Location</h3>
-          <p className="text-gray-700">123 Skyline Avenue, Jaipur, Rajasthan, India</p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-blue-300/40 transition"
-        >
-          <FaPhoneAlt className="text-blue-700 text-3xl mb-4" />
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
-          <p className="text-gray-700">+91 81049 42875</p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-blue-300/40 transition"
-        >
-          <FaEnvelope className="text-blue-700 text-3xl mb-4" />
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
-          <p className="text-gray-700">contact@tanwarconstruction.com</p>
-        </motion.div>
+        {[
+          {
+            icon: <FaMapMarkerAlt className="text-blue-600 text-3xl mb-4" />,
+            title: "Our Location",
+            text: "EFF 42, Capital Galleria,Sirsi Road, Jaipur 302034,Rajasthan, India",
+          },
+          {
+            icon: <FaPhoneAlt className="text-blue-600 text-3xl mb-4" />,
+            title: "Call Us",
+            text: "+91 81049 42875",
+          },
+          {
+            icon: <FaEnvelope className="text-blue-600 text-3xl mb-4" />,
+            title: "Email",
+            text: "contact@tanwarconstruction.com",
+          },
+        ].map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-blue-200/60 transition"
+          >
+            {item.icon}
+            <h3 className="text-xl font-semibold text-blue-900 mb-2">
+              {item.title}
+            </h3>
+            <p className="text-gray-700">{item.text}</p>
+          </motion.div>
+        ))}
       </section>
 
       {/* Contact Form + Map */}
@@ -68,8 +69,10 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Send Us a Message</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">
+            Send Us a Message
+          </h2>
+          <p className="text-gray-700 max-w-2xl mx-auto">
             Fill out the form below and our team will get back to you shortly.
           </p>
         </motion.div>
@@ -80,31 +83,31 @@ const Contact = () => {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-white rounded-2xl shadow-lg p-8 flex flex-col gap-6"
+            className="bg-white rounded-2xl shadow-lg p-8 flex flex-col gap-6 border border-blue-100"
           >
             <input
               type="text"
               placeholder="Your Name"
-              className="border border-gray-300 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
             <input
               type="email"
               placeholder="Your Email"
-              className="border border-gray-300 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
             <input
               type="text"
               placeholder="Subject"
-              className="border border-gray-300 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
             <textarea
               placeholder="Your Message"
               rows={6}
-              className="border border-gray-300 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
             ></textarea>
             <button
               type="submit"
-              className="bg-blue-900 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-800 transition"
+              className="bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition"
             >
               Submit
             </button>
@@ -132,19 +135,22 @@ const Contact = () => {
       </section>
 
       {/* CTA Footer */}
-      <section className="bg-blue-900 py-14 text-center text-white">
+      <section className="bg-gradient-to-r from-blue-600 to-blue-800 py-14 text-center text-white">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Start Your Project?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            Ready to Start Your Project?
+          </h2>
           <p className="text-blue-100 max-w-2xl mx-auto mb-6">
-            Contact Tanwar Construction today and let's build something extraordinary.
+            Contact Tanwar Construction today and let's build something
+            extraordinary together.
           </p>
           <a
             href="#"
-            className="bg-white text-blue-900 font-semibold px-8 py-3 rounded-full shadow-md hover:bg-blue-50 transition"
+            className="bg-white text-blue-800 font-semibold px-8 py-3 rounded-full shadow-md hover:bg-blue-50 transition"
           >
             Get in Touch
           </a>
