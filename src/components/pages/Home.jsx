@@ -9,6 +9,7 @@ import FAQSection from "../home/FAQSection";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import AboutPreview from "../home/AboutPreview";
 
 const Home = () => {
   return (
@@ -18,6 +19,8 @@ const Home = () => {
 
       {/* Trusted Badges */}
       <TrustedBadges />
+
+      <AboutPreview />
 
       {/* Services Overview */}
       <ServicesOverview />
