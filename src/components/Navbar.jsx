@@ -9,7 +9,8 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const navLinks = ["Home", "About", "Services", "Projects", "Contact"];
+  // ✅ Blog link added here after "Projects"
+  const navLinks = ["Home", "About", "Services", "Projects", "Blog", "Contact"];
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -42,7 +43,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex space-x-10 items-center">
+        <ul className="hidden md:flex space-x-6 items-center">
           {navLinks.map((link) => (
             <li key={link} className="relative group">
               <Link
